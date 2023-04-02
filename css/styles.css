@@ -1,1 +1,46 @@
-/* developer styles go here */
+h2 {
+    padding: 1rem;
+}
+
+.horizontal-content {
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    /* height so it has room to contain and doesnt push the content below down when hovering */
+    height: calc(205px+2rem);
+    /* height of the div (205.7px) when you hover plus margin */
+}
+
+.horizontal-content div {
+    flex: 0 0 330px;
+    /* width: 330px;  we put this into the flex above*/
+    height: 187px;
+    background-color: #3f1917;
+    margin: 1rem 0.5rem;
+    border-radius: 3px;
+}
+
+.horizontal-content>div:hover,
+.horizontal-content>div:active {
+    flex: 0 0 346.5px;
+    height: 205.7px;
+}
+
+.movie-bg {
+    background-image: url(../img/movie.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    /* image is fixed, changes as you scroll */
+    background-attachment: fixed;
+    background-position: bottom center;
+}
+
+.movie-bg h2 {
+    color: #fff;
+}
+
+p {
+    padding: 1.5rem 1rem;
+    max-width: 70ch;
+}
